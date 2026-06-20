@@ -1,6 +1,6 @@
 services:
   movie-service:
-    image: vinsguru/movie-service
+    image: joshinirav21/movie-service
     container_name: movie-service
     volumes:
       - ./docker-volume/otel:/otel
@@ -17,7 +17,7 @@ services:
     ports:
       - "8080:8080"
   actor-service:
-    image: vinsguru/actor-service
+    image: joshinirav21/actor-service
     container_name: actor-service
     volumes:
       - ./docker-volume/otel:/otel
@@ -29,7 +29,7 @@ services:
     depends_on:
       - otel-collector
   review-service:
-    image: vinsguru/review-service
+    image: joshinirav21/review-service
     container_name: review-service
     volumes:
       - ./docker-volume/otel:/otel
